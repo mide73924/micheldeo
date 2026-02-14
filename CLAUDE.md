@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a semi-professional personal website built with Astro and configured for GitHub Pages deployment at `https://pieberrykinnie.github.io`. The site features:
+The site features:
 
 - **Bio and Contact** - Homepage with personal information and contact details
 - **Experience Section** - Background, skills, with sub-pages for Education, Work, and Extracurricular activities
@@ -14,6 +14,7 @@ This is a semi-professional personal website built with Astro and configured for
 - **Blog** - Personal blog posts and course-related writeups
 
 **Technology Stack:**
+
 - **Astro 5.14.1** - Static site generator with component-based architecture
 - **Tailwind CSS 4.1.11** - Utility-first CSS framework
 - **TypeScript** - Strict configuration extends `astro/tsconfigs/strict`
@@ -34,6 +35,7 @@ pnpm astro ...       # Run Astro CLI commands (e.g., astro add, astro check)
 ## Architecture
 
 ### File Structure
+
 ```
 src/
 ├── assets/          # Static assets (SVGs, images)
@@ -63,10 +65,11 @@ src/
 ```
 
 ### Site Structure & Routing
+
 - **/** - Homepage with bio and contact information
 - **/experience** - Experience overview with links to sub-pages
   - **/experience/education** - Educational background
-  - **/experience/work** - Work experience 
+  - **/experience/work** - Work experience
   - **/experience/extracurricular** - Extracurricular activities
 - **/research** - Research interests and activities
 - **/projects** - Project showcase with filtering and modal details
@@ -74,16 +77,19 @@ src/
 - **/blog** - Blog posts and writeups
 
 ### Content Management
+
 - **Projects**: JSON files in `src/content/projects/` with schema for title, category, description, technologies, GitHub/deployed URLs, images
 - **Courses**: JSON files in `src/content/courses/` with course details and optional writeup links
 - **Blog Posts**: Markdown files in `src/content/blog/` with frontmatter for metadata
 
 ### Styling Architecture
+
 - **Global CSS**: `src/styles/global.css` imports Tailwind CSS
 - **Component Styles**: Scoped `<style>` blocks in `.astro` components
 - **Tailwind Integration**: Configured via Vite plugin in `astro.config.mjs`
 
 ### Astro Configuration
+
 - Site URL configured for GitHub Pages deployment
 - Tailwind CSS integrated via `@tailwindcss/vite` plugin
 - TypeScript strict mode enabled
@@ -102,6 +108,7 @@ src/
 ## Content Schema Examples
 
 ### Project JSON Schema
+
 ```json
 {
   "title": "Project Name",
@@ -111,17 +118,20 @@ src/
   "technologies": ["Tech1", "Tech2"],
   "githubUrl": "https://github.com/user/repo",
   "deployedUrl": "https://example.com",
-  "images": ["/images/projects/project-1.png"],
+  "images": [
+    "/images/projects/project-1.png"
+  ],
   "featured": true,
   "date": "2024-01-01"
 }
 ```
 
-### Course JSON Schema  
+### Course JSON Schema
+
 ```json
 {
   "title": "Course Name",
-  "code": "CS 101", 
+  "code": "CS 101",
   "institution": "University",
   "semester": "Fall 2024",
   "description": "Course description",
